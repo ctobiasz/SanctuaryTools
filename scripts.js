@@ -1,3 +1,5 @@
+console.log("Hello Hackerman. Thanks for checking out the website.")
+
 const masterworkCosts = [
     { tier: 1, description: 'Affixes are 5% stronger.', gold: 100000, common: 10, veiled: 3, obducite: 10, ingolith: 0, neathiron: 0, legendary: 0, forgotten: 0 },
     { tier: 2, description: 'Affixes are 5% stronger.', gold: 150000, common: 10, veiled: 3, obducite: 20, ingolith: 0, neathiron: 0, legendary: 0, forgotten: 0 },
