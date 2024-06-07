@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SanctuaryTools - Diablo 4 Builds and Material Calculators</title>
+    <meta name="description" content="SanctuaryTools offers Diablo 4 build guides, material conversion calculators, and comprehensive resources for optimizing your gameplay.">
+    <meta name="keywords" content="Diablo 4, Diablo IV, build guides, material conversion, calculators, SanctuaryTools, RPG, gaming">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SanctuaryTools",
+      "url": "https://www.sanctuarytools.com",
+      "description": "SanctuaryTools offers Diablo 4 build guides, material conversion calculators, and comprehensive resources for optimizing your gameplay.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.sanctuarytools.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SanctuaryTools</h1>
+        </header>
+        <main>
+            <div id="content">
+                <div id="pit-conversion">
+                    <h2>Pit Rewards based on Tier</h2>
+                    <form id="pit-form">
+                        <label for="pit-tier">Enter Pit Tier:</label>
+                        <input type="number" id="pit-tier" name="pit-tier" min="1" placeholder="69" required>
+                        <button type="submit">Show Rewards</button>
+                    </form>
+                    <div id="pit-results">
+                        <!-- Pit rewards will be displayed here -->
+                    </div>
+                </div>
+                <div id="recommended-farms">
+                    <h2>Recommended Pit Tier Farms</h2>
+                    <table>
+                        <tr><td><b>Pit 99</b></td></tr>
+                        <tr><td><b>Pit 89</b></td></tr>
+                        <tr><td><b>Pit 79</b></td></tr>
+                        <tr><td><b>Pit 69</b></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div id="material-and-masterwork">
+                <section id="material-conversion">
+                    <h2>Material Conversion</h2>
+                    <form id="material-form">
+                        <label for="material-type">Select Material Type:</label>
+                        <select id="material-type" name="material-type" required>
+                            <option value="neathiron">Neathiron</option>
+                            <option value="ingolith">Ingolith</option>
+                        </select>
+                        <label for="material-quantity">Enter Quantity:</label>
+                        <input type="number" id="material-quantity" name="material-quantity" min="1" placeholder="1" required>
+                        <button type="submit">Convert</button>
+                    </form>
+                    <div id="conversion-results">
+                        <!-- Conversion results will be displayed here -->
+                    </div>
+                </section>
+                <section id="masterwork-costs">
+                    <h2>Masterwork Tier Information</h2>
+                    <form id="tier-form">
+                        <label for="tier">Select Tier:</label>
+                        <select id="tier" name="tier" required>
+                            <!-- Options will be generated dynamically -->
+                        </select>
+                        <button type="submit">Show Details</button>
+                    </form>
+                    <div id="tier-results">
+                        <!-- Tier details will be displayed here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

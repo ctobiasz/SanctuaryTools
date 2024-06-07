@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    background-color: #131116;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1186px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #1a1b1c;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    width: 100%;
+}
+
+#content, #material-and-masterwork {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    overflow: hidden; /* Clear fix */
+}
+
+#content > div, #material-and-masterwork > section {
+    width: 48%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 10px 1%; /* Add margin to create separation */
+    border: solid 1px rgba(221, 221, 221, .15);
+    box-shadow: 0 0 0 1px #222;
+    background-color: rgba(221, 221, 221, .05);
+    border-radius: 8px;
+    min-height: 300px; /* Set a minimum height */
+}
+
+@media (max-width: 768px) {
+    #content > div, #material-and-masterwork > section {
+        width: 100%;
+        float: none;
+        margin: 10px 0; /* Adjust margin for mobile view */
+    }
+}
+
+h2 {
+    border-bottom: 1px solid #444;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+    margin: 0 0 20px 0;
+    font-size: 1.5em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, button, select {
+    margin: 10px 0;
+    color: #FFFFFF;
+    font-size: 1.1em;
+}
+
+input, select {
+    background-color: #222;
+    border: 1px solid #444;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BC6;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #79D4FF;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.1em;
+}
+
+.disclaimer {
+    font-size: 0.85em;
+    color: #e5e5e5;
+}
+
+#conversion-results, #tier-results {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: auto; /* Add vertical scrolling if content overflows */
+}
