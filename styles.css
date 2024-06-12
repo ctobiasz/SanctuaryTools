@@ -127,6 +127,11 @@ td, th {
     font-size: 1.1em;
 }
 
+.alert {
+    font-size: 0.8em;
+    color: #e5e5e5;
+}
+
 .disclaimer {
     font-size: 0.8em;
     color: #e5e5e5;

@@ -107,6 +107,7 @@ document.getElementById('pit-form').addEventListener('submit', (e) => {
         <p><b>Obducite</b>: ${rewards.obducite}</p>
         <p><b>Ingolith</b>: ${rewards.ingolith}</p>
         <p><b>Neathiron</b>: ${rewards.neathiron}</p>
+        <hr />
     `;
 });
 
