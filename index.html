@@ -33,19 +33,20 @@
                     <h2>Pit Rewards based on Tier</h2>
                     <form id="pit-form">
                         <label for="pit-tier">Enter Pit Tier:</label>
-                        <input type="number" id="pit-tier" name="pit-tier" min="1" placeholder="69" required>
+                        <input type="number" id="pit-tier" name="pit-tier" min="1" placeholder="666" required>
                         <button type="submit">Show Rewards</button>
                     </form>
                     <div id="pit-results">
                         <!-- Pit rewards will be displayed here -->
                     </div>
                     <div class="alert">
-                        <p><b>Notice:</b> Pit tier rewards for levels 101 and above are currently inaccurate due to recent changes. We are working on updated calculations and will provide accurate information soon. Thank you for your understanding.</p>
+                        <p><b>Notice:</b> Pit tier rewards for levels 101 and above are currently wonky due to Blizzard changing the way the drop amounts work. The number given is either spot on or close enough.</p>
                     </div>
                 </div>
                 <div id="recommended-farms">
                     <h2>Recommended Pit Tier Farms</h2>
                     <table>
+                        <tr><td><b>Pit 101</b></td></tr>
                         <tr><td><b>Pit 99</b></td></tr>
                         <tr><td><b>Pit 89</b></td></tr>
                         <tr><td><b>Pit 79</b></td></tr>
@@ -77,7 +78,7 @@
                         <select id="tier" name="tier" required>
                             <!-- Options will be generated dynamically -->
                         </select>
-                        <button type="submit">Show Details</button>
+                        <button type="button" id="show-details">Show Details</button>
                     </form>
                     <div id="tier-results">
                         <!-- Tier details will be displayed here -->

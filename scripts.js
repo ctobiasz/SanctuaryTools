@@ -1,22 +1,124 @@
-console.log("Hello Hackerman. Thanks for checking out the website.")
+console.log("Hello Hackerman. Thanks for checking out the website.");
+
+let selectedTier = null;
 
 const masterworkCosts = [
-    { tier: 1, description: 'Affixes are 5% stronger.', gold: 100000, common: 10, veiled: 3, obducite: 10, ingolith: 0, neathiron: 0, legendary: 0, forgotten: 0 },
-    { tier: 2, description: 'Affixes are 5% stronger.', gold: 150000, common: 10, veiled: 3, obducite: 20, ingolith: 0, neathiron: 0, legendary: 0, forgotten: 0 },
-    { tier: 3, description: 'Affixes are 5% stronger.', gold: 200000, common: 15, veiled: 3, obducite: 30, ingolith: 0, neathiron: 0, legendary: 0, forgotten: 0 },
-    { tier: 4, description: 'A random affix is 25% stronger.', gold: 300000, common: 15, veiled: 4, obducite: 40, ingolith: 0, neathiron: 0, legendary: 0, forgotten: 0 },
-    { tier: 5, description: 'Affixes are 5% stronger.', gold: 150000, common: 25, veiled: 7, obducite: 0, ingolith: 30, neathiron: 0, legendary: 0, forgotten: 0 },
-    { tier: 6, description: 'Affixes are 5% stronger.', gold: 200000, common: 25, veiled: 7, obducite: 0, ingolith: 40, neathiron: 0, legendary: 0, forgotten: 0 },
-    { tier: 7, description: 'Affixes are 5% stronger.', gold: 600000, common: 30, veiled: 8, obducite: 0, ingolith: 50, neathiron: 0, legendary: 0, forgotten: 0 },
-    { tier: 8, description: 'A random affix is 25% stronger.', gold: 800000, common: 40, veiled: 10, obducite: 0, ingolith: 80, neathiron: 0, legendary: 0, forgotten: 0 },
-    { tier: 9, description: 'Affixes are 5% stronger.', gold: 375000, common: 0, veiled: 9, obducite: 0, ingolith: 0, neathiron: 20, legendary: 2, forgotten: 1 },
-    { tier: 10, description: 'Affixes are 5% stronger.', gold: 450000, common: 0, veiled: 12, obducite: 0, ingolith: 0, neathiron: 25, legendary: 2, forgotten: 1 },
-    { tier: 11, description: 'Affixes are 5% stronger.', gold: 2000000, common: 0, veiled: 10, obducite: 0, ingolith: 0, neathiron: 50, legendary: 20, forgotten: 3 },
-    { tier: 12, description: 'A random affix is 25% stronger.', gold: 10000000, common: 0, veiled: 50, obducite: 0, ingolith: 0, neathiron: 250, legendary: 20, forgotten: 10 },
+    {   tier: 1, 
+        description: 'Affixes are 5% stronger.', 
+        obducite: 10, 
+        Rawhide: 10,
+        'Iron Chunk': 10,
+        'Veiled Crystal': 3,
+        gold: '100,000',
+    },
+    {   tier: 2, 
+        description: 'Affixes are 5% stronger.', 
+        obducite: 20, 
+        Rawhide: 10,
+        'Iron Chunk': 10,
+        'Veiled Crystal': 3,
+        gold: '150,000',
+    },
+    {   tier: 3, 
+        description: 'Affixes are 5% stronger.', 
+        obducite: 30, 
+        Rawhide: 15,
+        'Iron Chunk': 15,
+        'Veiled Crystal': 4,
+        gold: '200,000',
+    },
+    {   tier: 4, 
+        description: 'Affixes are 25% stronger.', 
+        obducite: 40, 
+        Rawhide: 15,
+        'Iron Chunk': 15,
+        'Veiled Crystal': 4,
+        gold: '300,000',
+    },
+    {   tier: 5, 
+        description: 'Affixes are 5% stronger.', 
+        Ingolith: 20, 
+        Rawhide: 25,
+        'Iron Chunk': 25,
+        'Veiled Crystal': 6,
+        gold: '400,000',
+    },
+    {   tier: 6, 
+        description: 'Affixes are 5% stronger.', 
+        Ingolith: 40, 
+        Rawhide: 30,
+        'Iron Chunk': 30,
+        'Veiled Crystal': 8,
+        gold: '600,000',
+    },
+    {   tier: 7, 
+        description: 'Affixes are 5% stronger.', 
+        Ingolith: 80, 
+        Rawhide: 40,
+        'Iron Chunk': 40,
+        'Veiled Crystal': 10,
+        gold: '800,000',
+    },
+    {   tier: 8, 
+        description: 'Affixes are 25% stronger.', 
+        Ingolith: 120, 
+        Rawhide: 50,
+        'Iron Chunk': 50,
+        'Veiled Crystal': 15,
+        gold: '800,000',
+    },
+    {   tier: 9, 
+        description: 'Affixes are 5% stronger.', 
+        Neathiron: 50, 
+        'Abstruce Sigil': 10,
+        'Baleful Fragment': 10,
+        'Coiling Ward': 10,
+        'Forgotten Soul': 3,
+        'Veiled Crystal': 20,
+        gold: '2,000,000',
+    },
+    {   tier: 10, 
+        description: 'Affixes are 5% stronger.', 
+        Neathiron: 100, 
+        'Abstruce Sigil': 10,
+        'Baleful Fragment': 10,
+        'Coiling Ward': 10,
+        'Forgotten Soul': 5,
+        'Veiled Crystal': 30,
+        gold: '3,000,000',
+    },
+    {   tier: 11, 
+        description: 'Affixes are 5% stronger.', 
+        Neathiron: 150, 
+        'Abstruce Sigil': 15,
+        'Baleful Fragment': 15,
+        'Coiling Ward': 15,
+        'Forgotten Soul': 7,
+        'Veiled Crystal': 40,
+        gold: '5,000,000',
+    },
+    {   tier: 12, 
+        description: 'Affixes are 25% stronger.', 
+        Neathiron: 250, 
+        'Abstruce Sigil': 20,
+        'Baleful Fragment': 20,
+        'Coiling Ward': 20,
+        'Forgotten Soul': 10,
+        'Veiled Crystal': 50,
+        gold: '2,500,000', 
+    },
 ];
 
 const populateTierOptions = () => {
     const tierSelect = document.getElementById('tier');
+
+    tierSelect.innerHTML = '';
+
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = 'Select tier';
+    tierSelect.appendChild(defaultOption);
+
     masterworkCosts.forEach(cost => {
         const option = document.createElement('option');
         option.value = cost.tier;
@@ -25,30 +127,47 @@ const populateTierOptions = () => {
     });
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    populateTierOptions();
+
+    document.getElementById('tier').addEventListener('change', (event) => {
+        const selectedValue = event.target.value;
+        if (selectedValue === '') {
+            selectedTier = null;
+        } else {
+            selectedTier = parseInt(selectedValue);
+        }
+    });
+
+    document.getElementById('show-details').addEventListener('click', () => {
+        if (selectedTier !== null) {
+            displayTierDetails(selectedTier);
+        } else {
+            alert('Please select a tier.');
+        }
+    });
+});
+
 const displayTierDetails = (tier) => {
     const cost = masterworkCosts.find(c => c.tier === tier);
     if (cost) {
         const tierResults = document.getElementById('tier-results');
-        tierResults.innerHTML = `
+        
+        let details = `
             <p><b>Description</b>: ${cost.description}</p>
-            <p><b>Gold</b>: ${cost.gold.toLocaleString()}</p>
-            <p><b>Common Upgrade Material</b>: ${cost.common}</p>
-            <p><b>Veiled Crystals</b>: ${cost.veiled}</p>
-            <p><b>Obducite</b>: ${cost.obducite}</p>
-            <p><b>Ingolith</b>: ${cost.ingolith}</p>
-            <p><b>Neathiron</b>: ${cost.neathiron}</p>
-            <p><b>Legendary Upgrade Material</b>: ${cost.legendary}</p>
-            <p><b>Forgotten Soul</b>: ${cost.forgotten}</p>
+            <p><b>Gold</b>: ${cost.gold}</p>
         `;
+
+        const resources = ['obducite', 'Ingolith', 'Neathiron', 'Rawhide', 'Iron Chunk', 'Veiled Crystal', 'Abstruce Sigil', 'Baleful Fragment', 'Coiling Ward', 'Forgotten Soul'];
+        resources.forEach(resource => {
+            if (cost[resource] !== undefined) {
+                details += `<p><b>${resource}</b>: ${cost[resource]}</p>`;
+            }
+        });
+
+        tierResults.innerHTML = details;
     }
 };
-
-// Event listener for tier form submission
-document.getElementById('tier-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const tier = parseInt(document.getElementById('tier').value);
-    displayTierDetails(tier);
-});
 
 const convertMaterials = (type, quantity) => {
     let ingolith = 0, obducite = 0;
@@ -90,12 +209,39 @@ const getRewards = (tier) => {
         obducite = 10 + tier - 1;
     } else if (tier >= 31 && tier <= 60) {
         ingolith = 20 + (tier - 31);
-    } else if (tier >= 61) {
+    } else if (tier >= 61 && tier < 101) {
         neathiron = 20 + (tier - 61);
+    } else if (tier >= 101) {
+        if (tier <= 102) {
+            neathiron = 60;
+        } else if (tier <= 104) {
+            neathiron = 61;
+        } else if (tier <= 107) {
+            neathiron = 62;
+        } else if (tier <= 109) {
+            neathiron = 63;
+        } else if (tier <= 112) {
+            neathiron = 64;
+        } else if (tier <= 114) {
+            neathiron = 65;
+        } else if (tier <= 117) {
+            neathiron = 66;
+        } else if (tier <= 120) {
+            neathiron = 67;
+        } else if (tier <= 122) {
+            neathiron = 68;
+        } else if (tier <= 124) {
+            neathiron = 69;
+        } else if (tier == 125) {
+            neathiron = 70;
+        } else {
+            neathiron = 70 + Math.floor((tier - 125) / 3);
+        }
     }
 
     return { obducite, ingolith, neathiron };
 };
+
 
 document.getElementById('pit-form').addEventListener('submit', (e) => {
     e.preventDefault();
