@@ -8,15 +8,7 @@ SanctuaryTools offers material conversion calculators, and comprehensive resourc
 - **Material Conversion Calculator**: Convert between materials like Neathiron and Ingolith.
 - **Masterwork Tier Information**: Details on the cost and benefits of each masterwork tier.
 
-## Usage
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/sanctuarytools.git
-    cd sanctuarytools
-    ```
-
-2. Open `index.html` in your web browser.
+https://sanctuarytools.com/
 
 ## License
 
